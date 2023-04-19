@@ -1,1 +1,12 @@
-<p>company-vacancies works!</p>
+<h1>Name: {{ company.name }}</h1>
+<h4>{{company.description}}</h4>
+<h5>{{ company.city }}</h5>
+
+
+<ul *ngIf="vacancies.length">
+  <li *ngFor="let vacancy of vacancies">
+    <p>{{vacancy.name}}</p>
+    <p>{{vacancy.description}}</p>
+    <p>{{vacancy.salary}} KZT</p>
+  </li>
+</ul>

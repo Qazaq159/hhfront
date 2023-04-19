@@ -1,1 +1,16 @@
-<p>companies works!</p>
+<p>Companies list</p>
+
+
+<ul>
+  <li *ngFor="let company of companies">
+    <h4>{{ company.id }}. <a (click)="ShareCompany(company)" [routerLink]="['/companies', company.id]">{{ company.name }}</a></h4>
+  </li>
+</ul>
+
+<!--<ul>-->
+<!--  <li *ngFor="let company of companies">-->
+<!--    <h2>{{ company.name }}</h2>-->
+<!--    <h4>{{ company.description }}</h4>-->
+<!--    <h5>{{ company.city }} | {{ company.address }}</h5>-->
+<!--  </li>-->
+<!--</ul>-->
